@@ -11,8 +11,8 @@ const Menu =()=>{
             <Navbar.Brand href="#home">
              <img
                             src={logo1} 
-                            width="250"
-                            height="230"
+                            width="160"
+                            height="145"
                             className="d-inline-block align-top"
                            
                         />

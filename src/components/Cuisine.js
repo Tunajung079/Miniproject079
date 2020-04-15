@@ -5,7 +5,7 @@ const Cuisine =()=>{
     return(
         <div> 
             Cuisine
-            
+            ant
             </div>
     )
 }
