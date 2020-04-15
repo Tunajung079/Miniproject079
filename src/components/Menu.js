@@ -18,10 +18,10 @@ const Menu =()=>{
                         />
     </Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Cuisine</Nav.Link>
-      <Nav.Link href="#pricing">Share your Food</Nav.Link>
-      <Nav.Link href="#pricing">About Us</Nav.Link>
+      <Nav.Link href="/Home">Home</Nav.Link>
+      <Nav.Link href="/Cuisine">Cuisine</Nav.Link>
+      <Nav.Link href="/Share">Share your Food</Nav.Link>
+      <Nav.Link href="#/About">About Us</Nav.Link>
     </Nav>
     <Nav>
       <Nav.Link href="#deets">Log out</Nav.Link>

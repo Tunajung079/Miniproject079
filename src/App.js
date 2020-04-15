@@ -4,6 +4,8 @@ import firebase from "firebase"
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth"
 import Menu from './components/Menu';
 import Log from './components/Log';
+import Footer from './components/Footer';
+import Home from './components/Home';
 
 firebase.initializeApp({
   apiKey:"AIzaSyBdKX-YN4Oako9yn7P3GvNmZpEuhSUrMxA",
@@ -40,11 +42,12 @@ const App =()=>{
       <span>
       <div>
         <Menu/>
-        Signed In!
-        
+        <Home/>
+        <Footer/>
         </div>
       <button onClick={()=>firebase.auth().signOut()}>Log out</button>
       </span>
+      
       :
       (
         <div><Log/>
