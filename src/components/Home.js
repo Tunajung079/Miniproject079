@@ -14,8 +14,7 @@ const Home = () => {
             <MDBCardBody>
               <MDBCardTitle className="h3">Share Food</MDBCardTitle>
               <MDBCardText>
-                Some quick example text to build on the card title and make up
-                the bulk of the card&apos;s content.
+                แหล่งรวมสูตรอาหารต่างๆ คุณสามารถทำอาหารได้อย่างไม่น่าเบื่อ และมาร่วมแชร์อาหารของคุณกัน.
               </MDBCardText>
               <MDBBtn href="#" gradient="purple" rounded>
                 มาแบ่งบันสูตรอาหารของคุณสิ!

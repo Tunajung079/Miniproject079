@@ -42,7 +42,7 @@ const App =()=>{
       console.log(!!user)
     })
   })
-//isSignedIn == true แสดงว่ามีการ login แสดงว่ามึงต้อง return อะไรออกไป ?  Ans  มึงดูไหมเนี่ยถ้าไม่ดูที่กูบอกกูไปละ กูเข้าใจ แต่ที่วางผิดมันคืออันไหน
+
 
   if(isSignedIn){
     return(
@@ -55,6 +55,7 @@ const App =()=>{
            <Route exact path="/share" component={Share}/>
            <Route exact path="/about" component={About}/>
          </Switch>
+         <Footer/>
       </div>
     );
 
