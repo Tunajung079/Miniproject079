@@ -9,6 +9,7 @@ import Home from './components/Home';
 import { Switch, Route, Router } from 'react-router-dom';
 import Cuisine from './components/Cuisine';
 import Share from './components/Share';
+import About from './components/About'
 
 firebase.initializeApp({
   apiKey: "AIzaSyBdKX-YN4Oako9yn7P3GvNmZpEuhSUrMxA",
@@ -52,6 +53,7 @@ const App =()=>{
            <Route exact path="/home" component={Home}/>
            <Route exact path="/cuisine" component={Cuisine}/>
            <Route exact path="/share" component={Share}/>
+           <Route exact path="/about" component={About}/>
          </Switch>
       </div>
     );

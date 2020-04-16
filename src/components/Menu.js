@@ -25,7 +25,7 @@ const Menu =()=>{
       <Nav.Link href="/Home">Home</Nav.Link>
       <Nav.Link href="/Cuisine">Cuisine</Nav.Link>
       <Nav.Link href="/Share">Share your Food</Nav.Link>
-      <Nav.Link href="#/About">About Us</Nav.Link>
+      <Nav.Link href="/About">About Us</Nav.Link>
     </Nav>
     <Nav>
       <Nav.Link href="#deets" onClick={()=>firebase.auth().signOut()}>Log out</Nav.Link>
