@@ -7,6 +7,8 @@ import Log from './components/Log';
 import Footer from './components/Footer';
 import Home from './components/Home';
 import { Switch, Route, Router } from 'react-router-dom';
+import Cuisine from './components/Cuisine';
+import Share from './components/Share';
 
 firebase.initializeApp({
   apiKey: "AIzaSyBdKX-YN4Oako9yn7P3GvNmZpEuhSUrMxA",
@@ -44,13 +46,13 @@ const App =()=>{
   if(isSignedIn){
     return(
       <div>
-       
          <Menu/>
-         
          <Switch>
-           ตรงนี้ มีกี่หน้า ก็มาทำ Route ตรงนี้
+           <Route exact path="/" component={Home}/>
+           <Route exact path="/home" component={Home}/>
+           <Route exact path="/cuisine" component={Cuisine}/>
+           <Route exact path="/share" component={Share}/>
          </Switch>
-      
       </div>
     );
 
