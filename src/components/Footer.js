@@ -10,9 +10,9 @@ const Footer =()=>{
   <Card.Body>
     <Card.Title>Share Food</Card.Title>
 
-    <Card.Text>
-      With supporting text below as a natural lead-in to additional content.
-    </Card.Text>
+    
+      ใส่ โลโก้ ม.อ. ช่องทางติดต่อ 
+   
   </Card.Body>
 </Card>
             
