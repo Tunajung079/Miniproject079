@@ -1,10 +1,14 @@
 import React, { Component, useState, useEffect } from 'react'
 import './Menu.css'
+import firebase from "firebase"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon } from 'react-bootstrap';
-import logo1 from './logo1.png'
+import logo1 from './logo1.png';
+
 
 const Menu =()=>{
+
+
     return(
         <div>
          <Navbar bg="light" variant="light">
@@ -24,9 +28,8 @@ const Menu =()=>{
       <Nav.Link href="#/About">About Us</Nav.Link>
     </Nav>
     <Nav>
-      <Nav.Link href="#deets">Log out</Nav.Link>
+      <Nav.Link href="#deets" onClick={()=>firebase.auth().signOut()}>Log out</Nav.Link>
     </Nav>
-    
   </Navbar>
         </div>
     )

@@ -6,10 +6,17 @@ import Menu from './components/Menu';
 import Log from './components/Log';
 import Footer from './components/Footer';
 import Home from './components/Home';
+import { Switch, Route, Router } from 'react-router-dom';
 
 firebase.initializeApp({
-  apiKey:"AIzaSyBdKX-YN4Oako9yn7P3GvNmZpEuhSUrMxA",
-  authDomain:"miniproject079.firebaseapp.com"
+  apiKey: "AIzaSyBdKX-YN4Oako9yn7P3GvNmZpEuhSUrMxA",
+  authDomain: "miniproject079.firebaseapp.com",
+  databaseURL: "https://miniproject079.firebaseio.com",
+  projectId: "miniproject079",
+  storageBucket: "miniproject079.appspot.com",
+  messagingSenderId: "738165764559",
+  appId: "1:738165764559:web:05620bfd1854aee5f122ba",
+  measurementId: "G-5V3RBCEYDL" 
 })
 
 const  uiConfig = {
@@ -32,33 +39,30 @@ const App =()=>{
       console.log(!!user)
     })
   })
+//isSignedIn == true แสดงว่ามีการ login แสดงว่ามึงต้อง return อะไรออกไป ?  Ans  มึงดูไหมเนี่ยถ้าไม่ดูที่กูบอกกูไปละ กูเข้าใจ แต่ที่วางผิดมันคืออันไหน
 
- 
-
-  
+  if(isSignedIn){
     return(
-    <div className="App">
-      {isSignedIn ? 
-      <span>
       <div>
-        <Menu/>
-        <Home/>
-        <Footer/>
-        </div>
-      <button onClick={()=>firebase.auth().signOut()}>Log out</button>
-      </span>
+       
+         <Menu/>
+         
+         <Switch>
+           ตรงนี้ มีกี่หน้า ก็มาทำ Route ตรงนี้
+         </Switch>
       
-      :
-      (
-        <div><Log/>
-      <StyledFirebaseAuth
-        uiConfig={uiConfig}
-        firebaseAuth={firebase.auth()}
-        
-      /> </div>)
-      }
-    </div>
-  )
+      </div>
+    );
+
+  }
+  else{
+    return(
+      <div>
+        <Log/>
+        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/> 
+      </div>
+    );
+  }
     
 }
 
