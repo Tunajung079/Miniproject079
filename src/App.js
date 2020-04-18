@@ -10,6 +10,7 @@ import { Switch, Route, Router } from 'react-router-dom';
 import Cuisine from './components/Cuisine';
 import Share from './components/Share';
 import About from './components/About'
+import config from './components/config'
 
 
 

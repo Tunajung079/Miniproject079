@@ -10,7 +10,12 @@ import {
   Spinner,
   Icon
 } from 'react-bootstrap'
+import { firestore } from '../index'
+
+
 const Share = ()=> {
+    const [menu,setMenu] = useState([{}]);
+    const [id,setId] = useSิtate(0);
     const [fname,setFname] = useState('');
     const [lname,setLname] = useState('');
     const [foodname,setFoodname] = useState('');
@@ -20,6 +25,13 @@ const Share = ()=> {
     const [pic2,setPic2] = useState('');
     const [pic3,setPic3] = useState('');
     const [pic4,setPic4] = useState('');
+
+    const addMenu = () => {
+
+        let id = (menu.length === 0) ? 1 : menu[menu.length - 1].id + 1
+        firestore.collection("share").doc(id + '').set({ id, fname, lname, foodname, gar, how, pic1,pic2,pic3,pic4 })
+      alert("Finish")
+    }
 
   return (
     <div>
@@ -53,7 +65,7 @@ const Share = ()=> {
         <Form.Control name="pic4" size='sm' type='text' placeholder='รูปภาพ 4 (URL)' onChange={(e)=> setPic4(e.target.value)}/>
       </Form.Group>
       <br />
-      <Button variant="primary">Submit</Button>{' '}
+      <Button variant="primary" onClick={addMenu}>Submit</Button>{' '}
       <br />
     </div>
   )
