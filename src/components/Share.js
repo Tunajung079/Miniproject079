@@ -11,11 +11,12 @@ import {
   Icon
 } from 'react-bootstrap'
 import { firestore } from '../index'
+import Datamenu from './Datamenu'
 
 
 const Share = ()=> {
     const [menu,setMenu] = useState([{}]);
-    const [id,setId] = useSิtate(0);
+    const [id,setId] = useState(0);
     const [fname,setFname] = useState('');
     const [lname,setLname] = useState('');
     const [foodname,setFoodname] = useState('');
@@ -26,12 +27,49 @@ const Share = ()=> {
     const [pic3,setPic3] = useState('');
     const [pic4,setPic4] = useState('');
 
-    const addMenu = () => {
+    useEffect(() => {
+        retriveData()
+      }, [])
+    
+    const retriveData = () => {
+        firestore.collection("share").onSnapshot((snapshot) => {
+          console.log(snapshot.docs)
+          let mytasks = snapshot.docs.map(d => {
+            const { id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4 } = d.data();
+            console.log(id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4)
+            return { id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4 };
+          });
+          setMenu(mytasks)
+        })
+      }
+      const deleteDatamenu = (id) => {
+        firestore.collection('share').doc(id + '').delete();
+      }
+      const editDatamenu=(id)=>{
+        firestore.collection('share').doc(id+'').set({id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4});
+      }
 
-        let id = (menu.length === 0) ? 1 : menu[menu.length - 1].id + 1
-        firestore.collection("share").doc(id + '').set({ id, fname, lname, foodname, gar, how, pic1,pic2,pic3,pic4 })
-      alert("Finish")
-    }
+      const renderDatamenu = () => {
+        if (menu && menu.length) {
+          return (
+            menu.map((menu, index) => {
+              return (
+                <Datamenu key={index} menu={menu}
+                        deleteDatamenu = {deleteDatamenu}
+                        editDatamenu = {editDatamenu}/>
+              )
+            })
+          )
+        }
+        else {
+          return (<li>No Data</li>)
+        }
+      }
+
+      const addDatamenu = () => {
+        let id = (menu.length === 0) ? 1 : menu[menu.length - 1].id + 1;
+        firestore.collection("share").doc(id + '').set({ id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4});
+      }
 
   return (
     <div>
@@ -65,8 +103,9 @@ const Share = ()=> {
         <Form.Control name="pic4" size='sm' type='text' placeholder='รูปภาพ 4 (URL)' onChange={(e)=> setPic4(e.target.value)}/>
       </Form.Group>
       <br />
-      <Button variant="primary" onClick={addMenu}>Submit</Button>{' '}
+      <Button variant="primary" onClick={addDatamenu}>Submit</Button>{' '}
       <br />
+      {renderDatamenu()}
     </div>
   )
 }
