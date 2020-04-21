@@ -8,7 +8,6 @@ const Cuisine =()=>{
 
     
   const [menu,setMenu] = useState([{}]);
-  const [id,setId] = useState(0);
   const [fname,setFname] = useState('');
   const [lname,setLname] = useState('');
   const [foodname,setFoodname] = useState('');

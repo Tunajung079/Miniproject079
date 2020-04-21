@@ -16,8 +16,7 @@ import { firestore } from '../index'
 
 const Share = ()=> {
 
-  const [menu,setMenu] = useState([{}]);
-  const [id,setId] = useState(0);
+  const [share,setShare] = useState([]);
   const [fname,setFname] = useState('');
   const [lname,setLname] = useState('');
   const [foodname,setFoodname] = useState('');
@@ -29,8 +28,24 @@ const Share = ()=> {
   const [pic4,setPic4] = useState('');
 
       const addDatamenu = () => {
-        let id = (menu.length === 0) ? 1 : menu[menu.length - 1].id + 1;
+        let id = (share.length === 0) ? 1 : share[share.length - 1].id + 1;
         firestore.collection("share").doc(id + '').set({ id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4});
+      }
+
+      useEffect(() => {
+        retriveData()
+      }, [])
+    
+    const retriveData = () => {
+        firestore.collection("share").onSnapshot(snapshot => {
+          console.log(snapshot.docs)
+          let mytasks = snapshot.docs.map(d => {
+            const { id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4 } = d.data();
+            console.log(id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4)
+            return { id, fname, lname, foodname, gar, how, pic1, pic2, pic3, pic4 };
+          });
+          setShare(mytasks)
+        })
       }
 
   return (
