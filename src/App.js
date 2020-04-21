@@ -11,7 +11,7 @@ import Cuisine from './components/Cuisine';
 import Share from './components/Share';
 import About from './components/About'
 import config from './components/config'
-
+import food from './components/food.jpg'
 
 
 const  uiConfig = {
@@ -55,6 +55,7 @@ const App =()=>{
   else{
     return(
       <div>
+        
         <Log/>
         <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/> 
       </div>
