@@ -7,7 +7,7 @@ const Log =()=>{
         <div> 
             
             <center><img src={logo1} /></center>
-             <center><Button >Sign In</Button></center>
+             <center>**Sign In**</center>
             
             </div>
     )
