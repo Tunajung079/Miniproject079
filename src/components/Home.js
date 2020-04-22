@@ -16,9 +16,7 @@ const Home = () => {
               <MDBCardText>
                 แหล่งรวมสูตรอาหารต่างๆ คุณสามารถทำอาหารได้อย่างไม่น่าเบื่อ และมาร่วมแชร์อาหารของคุณกัน.
               </MDBCardText>
-              <MDBBtn href="#" gradient="purple" rounded>
-                มาแบ่งบันสูตรอาหารของคุณสิ!
-              </MDBBtn>
+              <MDBBtn color="amber" href="/Share">มาแบ่งบันสูตรอาหารของคุณสิ!</MDBBtn>
             </MDBCardBody>
           </MDBJumbotron>
         </MDBCol>

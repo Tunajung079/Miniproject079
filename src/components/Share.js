@@ -80,7 +80,7 @@ const Share = ()=> {
         <Form.Control name="pic4" size='sm' type='text' placeholder='รูปภาพ 4 (URL)' onChange={(e)=> setPic4(e.target.value)}/>
       </Form.Group>
       <br />
-      <Button variant="primary" onClick={addDatamenu}>Submit</Button>{' '}
+      <Button variant="primary" onClick={addDatamenu} alt="Finish!!">Submit</Button>{' '}
       <br />
     </div>
   )
