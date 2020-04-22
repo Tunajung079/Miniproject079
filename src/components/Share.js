@@ -52,9 +52,13 @@ const Share = ()=> {
     <div>
       <Form.Row>
         <Col>
+        <br /><br />
+        <label for="exampleFormControlTextarea1">ชื่อ</label>
           <Form.Control name="fname" placeholder='First name' onChange={(e)=> setFname(e.target.value)}/>
         </Col>
         <Col>
+        <br /><br />
+        <label for="exampleFormControlTextarea1">นามสกุล</label>
           <Form.Control name="lname" placeholder='Last name' onChange={(e)=> setLname(e.target.value)}/>
         </Col>
         <br />
@@ -62,7 +66,8 @@ const Share = ()=> {
       <Form.Group>
       <br />
       <br />
-        <Form.Control name="foodname" size='lg' type='text' placeholder='ชื่ออาหาร' onChange={(e)=> setFoodname(e.target.value)} />
+      <label for="exampleFormControlTextarea1">ชื่ออาหาร</label>
+        <Form.Control name="foodname" size='lg' type='text' onChange={(e)=> setFoodname(e.target.value)} />
         <br />
         <label for="exampleFormControlTextarea1">เครื่องปรุง/วัตถุดิบ</label>
         <textarea name="gar" class="form-control" id="exampleFormControlTextarea1" rows="3" class="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e)=> setGar(e.target.value)}></textarea>
@@ -71,6 +76,7 @@ const Share = ()=> {
         <label for="exampleFormControlTextarea1">วิธีการทำอาหาร</label>
         <textarea name="how" class="form-control" id="exampleFormControlTextarea1" rows="3" class="form-control" id="exampleFormControlTextarea1" rows="3" onChange={(e)=> setHow(e.target.value)}></textarea>
         <br />
+        <label for="exampleFormControlTextarea1">รูปภาพ</label>
         <Form.Control name="pic1" size='sm' type='text' placeholder='รูปภาพ 1 (URL)' onChange={(e)=> setPic1(e.target.value)}/>
         <br />
         <Form.Control name="pic2" size='sm' type='text' placeholder='รูปภาพ 2 (URL)' onChange={(e)=> setPic2(e.target.value)}/>
