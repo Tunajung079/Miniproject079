@@ -3,6 +3,7 @@ import { MDBJumbotron, MDBBtn, MDBContainer, MDBRow, MDBCol,  MDBCardImage, MDBC
 
 const Home = () => {
   return (
+    
     <MDBContainer className="mt-5 text-center">
       <MDBRow>
         <MDBCol>
