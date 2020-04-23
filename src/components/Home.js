@@ -10,7 +10,7 @@ const Home = () => {
           <MDBJumbotron className="p-0">
             <MDBCardImage
               className="img-fluid"
-              src="https://www.twinpalmshotelsresorts.com/wp-content/uploads/2019/09/4024-1024x683.jpg"
+              src="https://historical-atd-th.s3.amazonaws.com/images/20180627-a0e802be4b971e20cf09a.jpg"
             />
             <MDBCardBody>
               <MDBCardTitle className="h3">Share Food</MDBCardTitle>
