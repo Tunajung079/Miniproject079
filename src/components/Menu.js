@@ -3,7 +3,7 @@ import './Menu.css'
 import firebase from "firebase"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon } from 'react-bootstrap';
-import logo1 from './logo1.png';
+import logo3 from './logo3.png';
 
 
 const Menu =()=>{
@@ -14,9 +14,9 @@ const Menu =()=>{
          <Navbar bg="light" variant="light">
             <Navbar.Brand href="#home">
              <img
-                            src={logo1} 
-                            width="160"
-                            height="145"
+                            src={logo3} 
+                            width="150"
+                            height="115"
                             className="d-inline-block align-top"
                            
                         />

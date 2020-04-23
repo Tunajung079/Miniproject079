@@ -1,5 +1,6 @@
 import React, { Component, useState, useEffect } from 'react'
 import { MDBCol, MDBContainer, MDBRow, MDBFooter,  MDBIcon, MDBBtn  } from "mdbreact";
+import logo3 from './logo3.png';
 
 const FooterPage = () => {
   return (
@@ -10,6 +11,15 @@ const FooterPage = () => {
             <img src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"  style={{ width:450, height: 150}}/>
           </MDBCol>
           <MDBCol md="3">
+          <img
+                            src={logo3} 
+                            width="180"
+                            height="145"
+                            className="d-inline-block align-top"
+                           
+                        />
+          </MDBCol>
+          <MDBCol md="2">
             <h5 className="title">Others</h5>
             <ul>
               <li className="list-unstyled">
@@ -26,7 +36,7 @@ const FooterPage = () => {
               </li>
             </ul>
           </MDBCol>
-          <MDBCol md="2">
+          <MDBCol md="1">
             <h5 className="title">Contact Us</h5>
             <ul>
               <li className="list-unstyled">
@@ -43,14 +53,12 @@ const FooterPage = () => {
               </li>
             </ul>
           </MDBCol>
-          <MDBCol md="1">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS_PYMGtKSgtSq8eDiCK5ZX1kVFgWPv5nMk8hpIFH8QKbsdfvZt&usqp=CAU"  style={{ width:150, height: 150}}/>
-          </MDBCol>
+          
         </MDBRow>
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright: <a href="https://www.mdbootstrap.com"> MDBootstrap.com </a>
+          &copy; {new Date().getFullYear()}: <a href="https://miniproject079.firebaseapp.com/"> Share Food (Thailand) </a>
         </MDBContainer>
       </div>
     </MDBFooter>
