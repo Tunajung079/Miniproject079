@@ -1,8 +1,8 @@
-import React, { Component, useState, useEffect } from 'react'
+import React from 'react'
 import './Menu.css'
 import firebase from "firebase"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon } from 'react-bootstrap';
+import {Nav, Navbar} from 'react-bootstrap';
 import logo3 from './logo3.png';
 
 

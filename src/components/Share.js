@@ -1,14 +1,8 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, {useState, useEffect } from 'react'
 import {
   Button,
   Form,
   Col,
-  Nav,
-  NavDropdown,
-  Navbar,
-  FormControl,
-  Spinner,
-  Icon
 } from 'react-bootstrap'
 import { firestore } from '../index'
 

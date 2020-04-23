@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Button, ListGroup, Carousel } from 'react-bootstrap'
 import {

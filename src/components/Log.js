@@ -1,5 +1,4 @@
-import React, { Component, useState, useEffect } from 'react'
-import { Button, Form, Nav, NavDropdown, Navbar, FormControl, Spinner, Icon } from 'react-bootstrap';
+import React from 'react'
 import logo1 from './logo1.png'
 const Log =()=>{
 

@@ -1,5 +1,5 @@
-import React, { Component, useState, useEffect } from 'react'
-import { MDBCol, MDBContainer, MDBRow, MDBFooter,  MDBIcon, MDBBtn  } from "mdbreact";
+import React from 'react'
+import { MDBCol, MDBContainer, MDBRow, MDBFooter} from "mdbreact";
 import logo3 from './logo3.png';
 
 const FooterPage = () => {
