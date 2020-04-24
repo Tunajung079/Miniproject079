@@ -1,5 +1,5 @@
 import React from 'react'
-import './Menu.css'
+
 import firebase from "firebase"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Nav, Navbar} from 'react-bootstrap';

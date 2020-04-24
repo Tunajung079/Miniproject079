@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button, ListGroup, Carousel } from 'react-bootstrap'
+import { Button, ListGroup, Carousel, Row } from 'react-bootstrap'
 import {
   MDBCol,
   MDBBtn,
@@ -13,6 +13,7 @@ import {
   MDBCardText
 } from 'mdbreact'
 import Modal from 'react-bootstrap/Modal'
+import './Share.css'
 //แสดงรายการอาหาร
 
 export default props => {
@@ -34,7 +35,8 @@ export default props => {
   const menuShow = () => setShow(true)
 
   return (
-    <div>
+    <div className="menu-list">
+      <div>
       <MDBCol style={{ maxWidth: '22rem' }}>
         <MDBCard>
           <MDBCardImage
@@ -107,6 +109,7 @@ export default props => {
           </Button>
         </Modal.Footer>
       </Modal>
+      </div>
     </div>
   )
 }

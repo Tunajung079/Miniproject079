@@ -5,7 +5,7 @@ import {
   Col,
 } from 'react-bootstrap'
 import { firestore } from '../index'
-
+import './Share.css'
 
 
 const Share = ()=> {
@@ -43,8 +43,9 @@ const Share = ()=> {
       }
 
   return (
+    <div  className="frome-menu">
     <div>
-      <Form.Row>
+      <Form.Row >
         <Col>
         <br /><br />
         <label for="exampleFormControlTextarea1">ชื่อ</label>
@@ -82,6 +83,7 @@ const Share = ()=> {
       <br />
       <Button variant="primary" onClick={addDatamenu} alt="Finish!!">Submit</Button>{' '}
       <br />
+    </div>
     </div>
   )
 }
