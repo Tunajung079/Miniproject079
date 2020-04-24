@@ -13,7 +13,6 @@ import {
   MDBCardText
 } from 'mdbreact'
 import Modal from 'react-bootstrap/Modal'
-import './Share.css'
 //แสดงรายการอาหาร
 
 export default props => {
