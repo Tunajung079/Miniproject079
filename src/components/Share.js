@@ -5,8 +5,7 @@ import {
   Col,
 } from 'react-bootstrap'
 import { firestore } from '../index'
-import './Share.css'
-
+import './Share.css';
 
 const Share = ()=> {
 
@@ -43,8 +42,8 @@ const Share = ()=> {
       }
 
   return (
-    <div  className="frome-menu">
     <div>
+    <div className="frome-menu">
       <Form.Row >
         <Col>
         <br /><br />

@@ -58,7 +58,7 @@ const FooterPage = () => {
       </MDBContainer>
       <div className="footer-copyright text-center py-3">
         <MDBContainer fluid>
-          &copy; {new Date().getFullYear()}: <a href="https://miniproject079.firebaseapp.com/"> Share Food (Thailand) </a>
+          &copy; {new Date().getFullYear()}: <a href="/Home"> Share Food (Thailand) </a>
         </MDBContainer>
       </div>
     </MDBFooter>
